@@ -1,0 +1,169 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link href="../static/styles.css" rel="stylesheet">
+{% endblock head %}
+
+
+{% block content %}
+
+
+<img id="btn_chatbot" onclick="openForm()" src="../static/images/robot.png">
+
+<div>
+
+    <section class="section info_blue_bg" id="home">
+        <!--      NAV BAR-->
+        {% include "navbar.html" %}
+        <div class="container">
+            <!-- Title -->
+            <div class="row home_container pt_8 pb_8">
+                <div class="container col-lg-5 mtl_8 mbl_5 pll_3 mll_8" id="coding_design">
+                    <div class="container mtl_1">
+                        <div id="titles">
+                            <h1 class="titlestyle" id="title1" style="color:white">CODING</h1>
+                            <h1 class="titlestyle" id="title2"> &DESIGN</h1>
+                        </div>
+                        <div class="subtitle">
+                            <h4 id="subtitle">María Medina <br>Software Engeneer</h4>
+                        </div>
+                    </div>
+                    <div class="mtl_2 mts_1 mbs_2 ml_1" id="buttons">
+                        <a class="button dark lg_button mr_05"
+                           href="https://www.linkedin.com/in/mariamedinacanete/"
+                           target="_blank">
+                            <img src="../static/images/linkedin.png"
+                                 style="margin-right:10px; margin-bottom:4px; margin-left:-5px; width:20px">
+                            Linkedin
+                        </a>
+
+                        <a class="button dark lg_button"
+                           href="mailto:mmcprogramacion@gmail.com">
+                            <img src="../static/images/gmail.png"
+                                 style="margin-right:13px; margin-bottom:5px; margin-left:-5px; width:22px">
+                            Email
+                        </a>
+
+
+                    </div>
+                </div>
+                <div class="col-lg-5 mtl_8 mbl_5" id="coding_gif">
+                    <div class="home_video">
+                        <video autoplay class="coding_video" loop muted src="../static/images/video.mp4"></video>
+                    </div>
+                </div>
+
+            </div>
+            <script>showTitle()</script>
+        </div>
+    </section>
+    <div id="info"></div>
+    <div class="all_web_container mrs_1 mls_1">
+        <!-- Who am I -->
+        <section class="section pt_8 pb_3  ">
+            <div class="row">
+                <div class="col-lg-8 info_container">
+                    <h1 class="info_dark_blue">Hello, I am María Medina. </h1> <br>
+                    <h2 class="info_blue">A programmer.</h2>
+                    <h4>I love automating tasks and designing solutions.</h4>
+                    <div id="programming">
+                        <h6 class="robot_font text-left" id="programming_h5"></h6>
+                    </div>
+                </div>
+                <div class="col-lg-2 d-flex justify-content-center align-items-center mrl_3" id="arrow_div">
+                    <a href="#projects">
+                        <div class="" id="arrowDown"></div>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+        <div class="section pt_5" id="projects"> </div>
+
+        <section class="section" >
+            <div class="  ptl_5">
+                <h2 class="info_blue">What Have I Done? </h2>
+                <br>
+                <h6 class="robot_font" id="more_projects_"></h6><br> <br>
+                <script> displaytext()</script>
+                <div class="row">
+                    {% include "chatbot_popup.html" %}
+                    <div class="col-lg-6 solution_cards_box ">
+                        <div class="solution_card light_blue_bg">
+                            <div class="row mb_05">
+                                <div class="so_top_icon col-2 ml-3">
+                                    <img class="" height="50" id="Layer_1" src="../static/images/robot.png"
+                                         style="background-image: none;"
+                                         width="40">
+                                </div>
+                                <h3 class="col-9 " style="margin:auto">ChatBot</h3>
+                            </div>
+                            <p class="parrafo robot_font">I'm Bot-tastic, a chatbot built using natural language
+                                processing
+                                techniques and OpenAI technology. I can answer your questions about María Medina
+                                experience. Try me!
+                            </p>
+                            <div>
+                                <a class="  info_blue_bg button very_rounded sm_button" onclick="openForm()">Test
+                                    it </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 solution_cards_box ">
+                        <div class="solution_card light_blue_bg">
+                            <div class="row bb_05">
+                                <div class="so_top_icon col-2 ml-3">
+                                    <img class="" height="50" id="Layer_1" src="../static/images/seo.png"
+                                         style="background-image: none;"
+                                         width="40">
+                                </div>
+                                <h3 class="col-9 " style="margin:auto">Seo-Tool</h3>
+                            </div>
+                            <p class="parrafo robot_font">
+                                This tool enables SEO companies to track the Google ranking of a set of
+                                keywords for hundreds of companies, saving a lot of time for
+                                SEO technicians every month.
+                            </p>
+                            <div>
+                                <a class=" info_blue_bg button very_rounded sm_button" href={{url_for('seo')}}>More
+                                    info</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+    {% include "footer.html" %}
+
+
+    <script>
+
+    window.onscroll = function() { toggleChatbotButtonVisibility() };
+
+    function toggleChatbotButtonVisibility() {
+        var chatbotButton = document.getElementById("btn_chatbot");
+        if (document.documentElement.scrollTop > 300 || document.body.scrollTop > 300) {
+            chatbotButton.style.display = "block";
+        } else {
+            chatbotButton.style.display = "none";
+        }
+    }
+
+
+
+
+
+
+
+    </script>
+
+
+    {% endblock content %}
+

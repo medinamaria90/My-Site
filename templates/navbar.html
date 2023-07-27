@@ -1,0 +1,30 @@
+
+
+<nav class="navbar navbar-expand-md fixed-top navigation info_blue_bg">
+    <a class="navbar-brand" href="{{ url_for('home') }}#home" onclick="document.getElementById('home_navbar').click();">
+        <img src="../static/images/mmc_white.png" width="105" height="30" alt="">
+    </a>
+    <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+        <span id="collapse_button" class="navbar-toggler-icon"></span>
+    </button>
+    <div style="navbar" class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto text-center home_page">
+            <li id= "home_li" class="navbar-item" onclick="document.getElementById('home_navbar').click();">
+                <a id="home_navbar" class="nav-link" href="{{url_for('home')}}#home" >// home</a>
+            </li>
+            <li class="navbar-item" onclick="document.getElementById('info_navbar').click();" >
+                <a id="info_navbar" class="nav-link" href="#info" >// info</a>
+            </li>
+            <li class="navbar-item" onclick="document.getElementById('projects_navbar').click();">
+                <a id="projects_navbar" class="nav-link" href="#projects">// projects</a>
+            </li>
+            <li class="navbar-item" onclick="document.getElementById('projects_navbar').click();">
+                <a id="projects_navbar" class="nav-link" href="{{url_for('login')}}">// login</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+

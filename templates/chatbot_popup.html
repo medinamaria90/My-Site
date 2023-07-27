@@ -1,0 +1,67 @@
+<!-- Chatbot -->
+
+
+<div class="text_block_chatbot chat-popup rounded_ " id="chatbot_box">
+    <div class="card_top card-header shadow d-flex align-items-center text-white border-bottom-0 info_blue_bg">
+        <img alt="..." class="avatar" src="../static/images/robot.png" style="margin:1em; width:3.2em; height:3.2em;">
+        <div>
+            <h3 class="text-center chatbot_title">Bot-Tastic</h3>
+            <p class="chatbot_title">Online</p>
+        </div>
+        <img alt="close" class="chatbot_close" onclick="closeForm()"
+             src="https://dl43epy47i7j6.cloudfront.net/close-icon.svg">
+    </div>
+    <div class="border bg-white" id="chat-content">
+        <div class="media-chat">
+            <img alt="..." class="avatar" src="../static/images/robot.png">
+            <div class="media-body">
+                <p class="chat_font">Hi, I am Bot-tastic. How can I help you?</p>
+                <p class="meta chat_font">
+                    <time datetime="{{year}}">{{hour}}</time>
+                </p>
+                <!--Aqui es donde se inserta con un script el msj del usuario.
+                Se le asignan estas clases: media-chat.media-chat-reverse .media-body p-->
+            </div>
+        </div>
+    </div>
+    <div class="chatbot_message_area bg-white">
+        <form class="color_white card_button" id="message_area">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+            <div class="publisher bt-1">
+                <img alt="..." class="avatar avatar-xs" src="../static/images/user.png">
+                <input autocomplete="off" class="publisher-input chat_font" id="message-input" maxlength="200"
+                       placeholder="Type your question..." required type="text"/>
+                <div class="spinner-border text-primary" id="loader" role="status"></div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<script>
+function openForm() {
+document.getElementById("chatbot_box").style.display = "flex";
+}
+
+function closeForm() {
+document.getElementById("chatbot_box").style.display = "none";
+var chatMessages = document.getElementById("chat-content");
+chatMessages.innerHTML ='<div class=" media-chat"><img class="avatar" src="../static/images/robot.png" alt="..."><div class="media-body"><p class="chat_font">' + "Hola, soy Bot-tastic. ¿En qué puedo ayudarte?" + '</p><p class="meta"></p></div></div>';
+}
+</script>
+
+
+<script>
+    //<!--Script to scroll to the end-->
+$(document).ready(function() {
+  // Get a reference to the chat content div
+  var chatContent = document.getElementById("chat-content");
+  // Add an event listener to the chat content div that detects when a new child element is added
+  chatContent.addEventListener("DOMNodeInserted", function(event) {
+    // Scroll to the bottom of the chat content div
+    chatContent.scrollTop = chatContent.scrollHeight;
+  });
+});
+</script>
+
