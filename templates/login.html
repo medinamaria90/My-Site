@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link href="../static/styles.css" rel="stylesheet">
+{% endblock head %}
+
+{% block content %}
+
+{% include "navbar_alternative.html" %}
+
+<!--WEBCONTAINER-->
+
+
+    <div class="container ptl_7 pts_4 mw_10">
+        <!-- DIV PARA FORMULARIO-->
+        <div class=" small_box shadow light_blue_bg mw_500 mx-auto rounded pt_3 pb_3">
+            <!-- Inserta tu email -->
+            <div class="text-center mb-4">
+                <img src="../static/images/login.png" style="height:70px; width:70px;" class="mb_1" alt="">
+                <h2 class="info_dark_blue"> <strong>Log in</strong> </h2>
+
+            </div>
+            <form action="/login" autocomplete="off" method="POST" >
+                {{ form.hidden_tag() }}
+
+                <div class="container text-center small_container">
+                    <div class="max-auto">
+
+                        <div class="form-floating">
+                            {{ form.email(class="form-control form_sign_in") }}
+                            {{ form.email.label (class="my-label-class") }}
+                        </div>
+
+                        <div class="form-floating">
+                            {{ form.password(class="form-control form_sign_in") }}
+                            {{ form.password.label (class="") }}
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <input class="form-check-input" id="remember" type="checkbox" name="remember">
+                        <label class="form-check-label" for="remember">Remember me</label>
+                    </div>
+
+                    {{ form.submit(class="info_blue_bg button lg_button mt_05 mb_1") }}
+
+                    <div class="mb-3">
+                        Don't have an account?
+                        <a class="color_lightblue" href="{{url_for('seo')}}#trial"> Register</a>
+                    </div>
+                    <div class="mb-3">
+                        Forgot your password?
+                        <a class="color_lightblue" href={{(url_for("forgot_password"))}}> Reset your password</a>
+                    </div>
+
+                    <!--wrong password or email-->
+                    {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                    {% for message in messages %}
+                    <div class="alert alert-primary alert-dismissible fade show text-center" role="alert">
+                        <strong>
+                            {{ message }}
+                        </strong>
+                        <button aria-label="Close" class="btn-close" data-dismiss="alert" type="button">
+                            <span aria-hidden="true"></span>
+                        </button>
+                    </div>
+                    {% endfor %}
+                    {% endif %}
+                    {% endwith %}
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+<!--Footer-->
+{% include "footer.html" %}
+<!--End of footer-->
+
+<script>
+const showButton = document.getElementById("show_button");
+const showButton2 = document.getElementById("show_button2");
+const hiddenElements = document.getElementById("hidden_elements");
+
+showButton.addEventListener("click", function() {
+  showButton.style.display = "none";
+  showButton2.style.display = "none";
+  hiddenElements.style.display = "block";
+});
+
+
+</script>
+
+{% endblock content %}

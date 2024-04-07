@@ -1,0 +1,50 @@
+:root {
+  --info_blue: #17a2b8;
+  --classic_blue: #3aafa9;
+  --dark_blue: #37306B;
+  --light_blue: #ebf7f6;
+  --info_dark_blue: #12707f;
+  --dark_pink: #dc3545;
+}
+
+.info_dark_blue{
+color:var(--info_dark_blue);
+}
+
+.info_blue{
+color:var(--info_blue) !important
+}
+
+.dark_blue{
+color:var(--dark_blue)
+}
+
+.light_blue{
+color:var(--light_blue)
+}
+
+.white{
+color:white)
+}
+
+
+.info_dark_blue_bg{
+background-color:var(--info_dark_blue) !important;
+}
+
+.info_blue_bg{
+background-color:var(--info_blue) !important;
+}
+
+.dark_blue_bg{
+background-color:var(--dark_blue)
+}
+
+.light_blue_bg{
+background-color:var(--light_blue)
+}
+
+
+.white_bg{
+background-color:white
+}

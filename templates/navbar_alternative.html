@@ -1,0 +1,29 @@
+
+<!--NAVBAR-->
+<nav class="navbar navbar-expand-md fixed-top navigation" style=" background-color:rgba(235,247,246, 0.5);">
+    <a class="navbar-brand" onclick="document.getElementById('home_navbar').click();">
+        <img src="../static/images/mmc_info_blue_reversed.png" width="105" height="30" alt="">
+    </a>
+    <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+        <span id="collapse_button" class="navbar-toggler-icon"></span>
+    </button>
+    <div style="navbar" class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto text-center">
+
+            <li id= "home_li" class="navbar-reverse-item very_rounded" onclick="document.getElementById('home_navbar').click();">
+                <a id="home_navbar" class=" info_blue_bg button very_rounded sm_button" href="{{url_for('home')}}#projects" > //home</a>
+            </li>
+            <li id= "home_li" class="navbar-reverse-item">
+                <a class=" info_blue_bg button very_rounded sm_button" href="{{url_for('seo')}}" > //seo</a>
+            </li>
+            <li id= "home_li" class="navbar-reverse-item">
+                <a class="info_blue_bg button very_rounded sm_button" href="{{url_for('login')}}" > //account</a>
+            </li>
+
+
+        </ul>
+    </div>
+</nav>

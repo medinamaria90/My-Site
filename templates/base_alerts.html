@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link href="../static/styles.css" rel="stylesheet">
+{% endblock head %}
+
+{% block content %}
+
+{% include "navbar_alternative.html" %}
+
+<!--WEBCONTAINER-->
+
+
+    <div class="container mtl_6 ptl_7 pts_4 mw_10 pb_7">
+        <!-- DIV PARA FORMULARIO-->
+        <div class=" small_box shadow light_blue_bg mw_600 mx-auto rounded pt_3 pb_2 pr_1 pl_1 ">
+            <div class="text-center">
+                <img src="../static/images/login.png" style="height:70px; width:70px;" class="mb_1" alt="">
+                <h2 class="info_dark_blue"> {{ alert_title | safe }} </h2>
+                <h4> {{ alert_content | safe }} </h4>
+
+
+                {% block content_alerts %}
+
+                {% endblock %}
+
+            </div>
+
+        </div>
+    </div>
+
+
+<!--Footer-->
+{% include "footer.html" %}
+<!--End of footer-->
+
+<script>
+const showButton = document.getElementById("show_button");
+const showButton2 = document.getElementById("show_button2");
+const hiddenElements = document.getElementById("hidden_elements");
+
+showButton.addEventListener("click", function() {
+  showButton.style.display = "none";
+  showButton2.style.display = "none";
+  hiddenElements.style.display = "block";
+});
+
+
+</script>
+
+{% endblock content %}

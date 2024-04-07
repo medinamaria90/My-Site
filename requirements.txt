@@ -1,0 +1,16 @@
+Flask==2.2.3
+Flask_Login==0.6.2
+Flask_Mail==0.9.1
+flask_sqlalchemy==3.0.3
+Flask_WTF==1.1.1
+itsdangerous==2.1.2
+openai==0.27.4
+SQLAlchemy==2.0.15
+Werkzeug==2.2.3
+WTForms==3.0.1
+email_validator==2.0.0
+wheel==0.40.0
+setuptools==67.8.0
+mysqlclient==2.1.1
+python-dotenv==1.0.0
+python-dotenv
