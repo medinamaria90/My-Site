@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link href="../static/styles.css" rel="stylesheet">
+
+{% endblock head %}
+
+
+{% block content %}
+<!--      NAV BAR -->
+{% include "navbar.html" %}
+<img id="btn_chatbot" onclick="openForm()" src="../static/images/robot.png">
+
+<section class="projects_section clear_violeta_bg">
+    <div class="container projects_container"></div>
+        <h1 class=" pb-3 section_title">My projects</h1>
+        <div class="row dark_violeta_bg rounded mt-3 mb-3">
+
+            <div class="video col-lg-6 col-12 ps-4 pt-4 mb-4 project_img">
+                <video style="object-fit: cover;" autoplay loop muted class="rounded img_project"  src="../static/images/Coupler.mp4">
+            </div>
+            <br>
+            
+            <div style="color:#a5f3fc" class="col-lg-6 col-12 mt-4">
+                <h5> Coupler - The web-app for making friends </h5>
+                <p class="mt-3"> Web application for making new connections and meeting friends with a wealth of functionalities.
+                </p>
+                <p>
+                    Includes registration and login with Google, functional and comprehensive profile management, a matches system, and an online chat system. Utilizes an SQL database.
+                    Built using Python and Django, with JavaScript, bootstrap, CSS, and HTML. 
+                </p>
+                <div class=mb-3>
+                    <button type="button" class="btn btn-primary">
+                        Python
+                      </button>
+                      <button type="button" class="btn btn-primary">
+                        Javascript
+                      </button>
+                      <button type="button" class="btn btn-primary">
+                        SQL
+                      </button>
+                      <button type="button" class="btn btn-primary">
+                        Django
+                      </button>
+                      <button type="button" class="btn btn-danger">
+                        <a style="color:white" target="_blank" href="https://coupler-medinamaria90.eu.pythonanywhere.com/"> Go to Demo </a>
+                      </button>   
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row dark_violeta_bg rounded mt-3">
+
+            <div class="video col-lg-6 col-12 ps-4 pt-4 pb-4">
+                <video style="object-fit: cover;" autoplay loop muted class="rounded img_project" src="../static/images/SEO_VIDEO.mp4">
+            </div>
+            <br>
+            
+            <div style="color:#a5f3fc" class="col-lg-6 col-12 mt-4">
+                <h5> Seo-Traker - Track the Google position of keywords </h5>
+                <p class="mt-3"> SEO-Traker facilitates Google position analysis for SEO agencies. It is a desktop program with a very simple operation.
+                <p>
+                    Features GUI, web scraping (Selenium), and data management (Pandas). License verification via database endpoint.
+                </p>
+                <div class=mb-3>
+                  <button type="button" class="btn btn-primary">
+                    Python
+                  </button>
+                  
+                  <button type="button" class="btn btn-primary">
+                    Selenium
+                  </button>
+                  <button type="button" class="btn btn-primary">
+                    SQL
+                  </button>
+                  <button type="button" class="btn btn-primary">
+                    Flask
+                  </button>
+                  <button type="button" class="btn btn-danger">
+                    <a style="color:white" target="_blank" href="https://www.mmcprojects.dev/seo"> Go to App </a>
+                  </button>   
+                </div>
+            </div>
+        </div>
+
+        <div class="row dark_violeta_bg rounded mt-3">
+
+            <div class="video col-lg-6 col-12 ps-4 pt-4 pb-4">
+                <img style=""  class="rounded img_project" width="422"  src="../static/images/curro_web.png">
+            </div>
+            <br>
+            
+            <div style="color:#a5f3fc" class="col-lg-6 col-12 mt-4">
+                <h5> Curro Cañete.  </h5>
+                <p class="mt-3"> Developed a website for a renowned author and an online academy.
+                <p>
+                Wordpress and customized php templates to meet client requirements. Implemented a customized online academy within the website, offering courses for sale to the author's followers. E-commerce solutions. PHP, JavaScript, HTML, and CSS.
+                </p>
+                <div class=mb-3>
+                  <button type="button" class="btn btn-primary">
+                    PHP
+                  </button>
+                  
+                  <button type="button" class="btn btn-primary">
+                    HTML
+                  </button>
+                  <button type="button" class="btn btn-primary">
+                    CSS
+                  </button>
+                  <button type="button" class="btn btn-primary">
+                    Wordpress
+                  </button>
+                  <button type="button" class="btn btn-danger">
+                    <a style="color:white" target="_blank" href="https://www.currocanete.com"> Go to Site </a>
+                  </button> 
+            </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<div>
+
+
+    {% include "footer.html" %}
+
+    <script>
+    window.onscroll = function() { toggleChatbotButtonVisibility() };
+
+    function toggleChatbotButtonVisibility() {
+        var chatbotButton = document.getElementById("btn_chatbot");
+        if (document.documentElement.scrollTop > 300 || document.body.scrollTop > 300) {
+            chatbotButton.style.display = "block";
+        } else {
+            chatbotButton.style.display = "none";
+        }
+    }
+
+
+    </script>
+
+
+    {% endblock content %}
+

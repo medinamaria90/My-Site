@@ -16,7 +16,7 @@ color:red;
 
 
 nav.navbar{
-    padding:.5em 8em .5em 8em;
+    padding:0em 5em 0em 5em;
     margin:0;
 }
 
@@ -37,9 +37,6 @@ ul.navbar-nav li.navbar-reverse-item{
 li.navbar-item a.nav-link{
     padding:0;
     color:#fff;
-    font-weight:600;
-
-
 }
 
 li.navbar-item a.nav-link.black{
@@ -128,6 +125,7 @@ div.small_container{
 
 
 a{
+    font-size: 1em !important;
     color:black;
 }
 
@@ -142,6 +140,9 @@ div div.text_block{
 
 #projects{
     
+}
+p {
+    color:white;
 }
 .back_to_top{
     color:#8f2d56;
@@ -164,47 +165,66 @@ div div.text_block{
 #subtitle,#title1,#title2{
     opacity:0
 }
-
+#title2, #subtitle{
+    color:white;
+}
+#subtitle{
+    margin-left:5px;
+}
+p {
+    font-family: "Poppins", sans-serif !important;
+}
 .titlestyle{
-    font-family:Montserrat-Black,sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
     font-size:4rem;
     line-height:.7em;
-    font-weight:900;
     white-space:nowrap
 }
+.text-transparent {
+    color: transparent;
+  }
+  .bg-clip-text {
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  .to-blue-400 {
+    --tw-gradient-to: #60a5fa;
+  }
+  .from-cyan-300 {
+    --tw-gradient-from: #67e8f9;
+    --tw-gradient-to: rgb(103 232 249 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  }
+  .bg-gradient-to-r {
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  }
 
 
 h1{
-    font-family:'Montserrat', sans-serif;
     font-size:2.5em;
 }
 
 h2{
-    font-family:'Karla', sans-serif;
     font-size:2.2em;
 }
 
-h3{
-    font-family:'Montserrat', sans-serif;
-    font-size:1.6em;
-}
-
-h4{
-    font-family:'Karla', sans-serif;
-}
-
-h5{
-    font-family:'Montserrat', sans-serif;
-}
-
-h6{
-    font-family:'Karla', sans-serif;
-}
 
 
-p.parrafo{
-    font-family:'Montserrat', sans-serif;
+h5, a, h4, h6, h3, h2{
+    font-family: "Poppins", sans-serif;
 }
+
+.project_img{
+    max-width: 100%;
+}
+.img_project{
+    width: 422px;
+    max-width: 100%;
+    
+}
+
 
 .robot_font{
     font-family: 'JetBrains Mono', monospace !important;
@@ -231,8 +251,7 @@ video.coding_video{
 }
 
 #buttons{
-    padding:3em 0 3em 0
-    text-align:center;
+    padding:2em 0 0 1em !important;
 }
 
 a[data-hs-anchor="true"] {
@@ -341,19 +360,17 @@ margin-top:0px !important
     color:var(--info_dark_blue)
     }
 
-
-
-
-
 section div div.row{
 display:flex;
 }
 
-
-
 #footer{
-    padding:4% 8% 1% 8%;
+    padding:1em 0 1em 0;
     font-size:90%
+}
+
+.second_subtitle{
+    font-size:01em;
 }
 
 footer p.footer_text{
@@ -507,6 +524,22 @@ div input.publisher-input{
 
 }
 
+.about_section{
+    padding: 8em 19em 8em 19em;
+}
+.projects_section{
+    padding: 7em 13em 8em 13em;
+}
+
+.section_title{
+    color:white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700 !important;
+    font-size:2.2em;
+    line-height:.7em;
+    white-space:nowrap
+}
+
 .media-chat .media-body p{
 
     position:relative;
@@ -579,6 +612,24 @@ li.seo_li:before {
 
 
 @media (max-width:680px){
+    .projects_section{
+        padding: 7em 1em 5em 1em;
+    }
+    .about_section {
+        padding: 6em 1em 1em 1.2em;
+    }
+    .titlestyle{
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size:3rem!important;
+        line-height:.7em;
+        white-space:nowrap
+    }
+    nav.navbar{
+        padding:.5em 0 .5em 2em;
+        margin:0
+    }
     .seo_video{
 
     }
@@ -611,10 +662,7 @@ li.seo_li:before {
     div div#chat-content{
         height:75%;
     }
-    nav.navbar{
-        padding:.5em 0 .5em 2em;
-        margin:0
-    }
+
     .solution_cards_box .solution_card{
         padding: 1em 1em 1em 1em;
         margin:0 0em 1em 0em
@@ -640,10 +688,6 @@ padding-right:0;
         font-size:1.5em;
     }
 
-    nav.navbar{
-        padding:.5em 0 .5em 2em;
-        margin:0
-    }
     .color_box{
         margin: 0 0.5em 8em 0.5em;
         padding:2em 0.5em 1em 0.5em;
@@ -660,7 +704,12 @@ padding-right:0;
 
 
 @media (min-width:680px) and (max-width:800px){
-
+    .projects_section{
+        padding: 7em 2em 5em 2em;
+    }
+    .about_section {
+        padding: 6em 3em 2em 6em;
+    }
     nav.navbar{
         padding:.5em 0 .5em 2em;
         margin:0
@@ -687,6 +736,13 @@ padding-right:0;
 
 
 @media (min-width:800px) and (max-width:1125px){
+    .projects_section{
+        padding: 7em 2em 5em 2em;
+    }
+    
+    .about_section {
+        padding: 6em 4em 3em 4em;
+    }
 
 #home{
     display: flex;
@@ -696,6 +752,7 @@ padding-right:0;
 #titles{
     justify-content: center;
 }
+
 
 .all_web_container{
     margin:5em 6em 3em 8em
@@ -711,7 +768,9 @@ padding-right:0;
 
 
 @media (min-width:1125px) and (max-width:1300px){
-
+    .projects_section{
+        padding: 7em 4em 5em 4em;
+    }
 .all_web_container{
     margin:5em 10em 3em 10em
 }

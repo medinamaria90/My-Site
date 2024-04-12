@@ -142,8 +142,25 @@ def sesion_expirada():
 def load_user(id):
     return ModelUser.get_by_id(id)
 
+
+@app.route("/home2")
+def home2():
+    return render_template("home_copy.html", year = current_year)
+        
 @app.route("/")
 def home():
+    return render_template("home.html", year = current_year)
+
+@app.route("/privacy")
+def privacy():
+    return render_template("privacy.html", year = current_year)
+
+@app.route("/about")
+def about():
+    return render_template("about.html", year = current_year)
+
+@app.route("/projects")
+def projects():
     seo_url = url_for('seo')
     cards = [
         {
@@ -180,10 +197,7 @@ def home():
         },
     ]
 
-    return render_template("home.html", year = current_year, cards=cards)
-@app.route("/privacy")
-def privacy():
-    return render_template("privacy.html", year = current_year)
+    return render_template("projects.html", year = current_year, cards=cards)
 
 @app.route("/forgot_password",  methods=["GET", "POST"])
 def forgot_password():
@@ -368,6 +382,7 @@ def handle_all_errors(error):
 
 if production == False:
     if __name__ == "__main__":
+        print("prod false")
         csrf.init_app(app)
         app.run(port=4000)
 

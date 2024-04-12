@@ -2,6 +2,7 @@
 
 {% block head %}
 <link href="../static/styles.css" rel="stylesheet">
+
 {% endblock head %}
 
 
@@ -13,17 +14,21 @@
 <div>
 <!--      NAV BAR -->
 {% include "navbar.html" %}
-<section class="section info_blue_bg d-flex align-items-center" id="home">
+<section class="section d-flex align-items-center clear_violeta_bg" id="home">
     <div class="container">
         <div class="row home_container">
             <div class="container col-lg-5 mtl_8 mbl_5 pll_3 mll_8" id="coding_design">
                 <div class="container mtl_1">
-                    <div id="titles">
-                        <h1 class="titlestyle" id="title1" style="color:white">CODING</h1>
-                        <h1 class="titlestyle" id="title2"> &DESIGN</h1>
-                    </div>
                     <div class="subtitle">
-                        <h4 id="subtitle">María Medina <br>Software Engeneer</h4>
+                        <h5 id="subtitle">Hi, I am Maria Medina, I am a</h5>
+                    </div>
+                    <div id="titles">
+                        <h1 class="titlestyle bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-400 text-transparent" id="title1"> Back End</h1>
+                        <h1 class="titlestyle" id="title2"> developer</h1>
+                    </div>
+                    <div >
+                        <h5 class="mt-3 grey_blue_col second_subtitle">Continously learning
+                            & <br>seeking new opportunities</h5>
                     </div>
                 </div>
                 <div class="mtl_2 mls_1 mll_1 pl_05 mts_1 mbs_2 ml_1" id="buttons">
@@ -39,10 +44,18 @@
                              style="width:22px">
                     </a>
                     <a class="round_button mrl_1"
+                        target="_blank"
                        href="https://github.com/medinamaria90">
                         <img src="../static/images/github.png"
                              style="width:22px">
                     </a>
+                    <a class="round_button mrl_1"
+                    target="_blank"
+                    href="../static/images/CVMMC.pdf">
+                     <img src="../static/images/curriculum-vitae.png"
+                          style="width:22px">
+                 </a>
+                    
                 </div>
             </div>
             <div class="col-lg-5 mtl_8 mbl_5" id="coding_gif">
@@ -55,71 +68,6 @@
         <script>showTitle()</script>
     </div>
 </section>
-<div id="aboutme"></div>
-    <div class="all_web_container mrs_1 mls_1 pt-4" >
-        <!-- Who am I -->
-        <section class="section d-flex align-items-center" id="info">
-            <div class="container mt-5">
-                <div class="row">
-                    <div class="col-lg-10">
-                        <div class="info_container">
-                            <h1 class="info_dark_blue">Hello, I am María Medina.</h1>
-                            <h2 class="info_blue">A programmer.</h2>
-                            <h4 class="mt-4">Freelancer. Student at 42 coding school. Python, Bash, C language, and more.</h4>
-                            <h4>I love automating tasks and designing solutions.</h4>
-                            <div id="programming">
-                                <h6 class="robot_font text-left" id="programming_h5"></h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="row justify-content-space-between">
-                    <div class="col-lg-4 text-center">
-                        <div id="arrow_div">
-                            <a href="#projects">
-                                <div id="arrowDown"></div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <div id="projects"> </div>
-        <section class="section ptl_5" >
-            <div class="container">
-            <h1 class="info_dark_blue pt-4">My projects.</h1>
-            <h2 class="info_blue">What Have I Done?</h2>
-   
-            {% include "chatbot_popup.html" %}
-            <div class="row pt-4">
-                {% for card in cards %}
-                <div class="col-lg-5 solution_cards_box">
-                    <div class="solution_card light_blue_bg">
-                        <div class="row mb_05">
-                            <div class="so_top_icon col-2 ml-3">
-                                <img class="" height="50" src="{{ card.image }}" width="40">
-                            </div>
-                            <h3 class="col-9" style="margin:auto">{{ card.title }}</h3>
-                        </div>
-                        <p class="parrafo robot_font">{{ card.description }}</p>
-                        <div>
-                            <a class="info_blue_bg button very_rounded sm_button" onclick="{{ card.onclick_function }}" href="{{ card.url }}">{{ card.button_text }}</a>
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-        </section>
-       
-        <script>
-            displaytext();
-        </script>
-        
-    </div>
-</div>
 
     {% include "footer.html" %}
 
