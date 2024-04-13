@@ -573,6 +573,10 @@ li.seo_li:before {
 
 
 @media (max-width:680px){
+    html, body {
+        overflow-x: hidden;
+      }
+    
     #coding_design{
         text-align: center;
     }

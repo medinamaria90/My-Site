@@ -7,7 +7,7 @@ import datetime
 
 load_dotenv()
 
-production = True
+production = False
 
 
 class Config:
