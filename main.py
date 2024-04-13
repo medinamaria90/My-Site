@@ -161,43 +161,7 @@ def about():
 
 @app.route("/projects")
 def projects():
-    seo_url = url_for('seo')
-    cards = [
-        {
-            'title': 'Coupler',
-            'image': '../static/images/coupler.png',
-            'description': "Coupler, a social connection platform that help users discover new friendships. This interactive demo showcases user profiles, real-time chat functionality, and a matching system.",
-            'button_text': 'More info',
-            'url': 'https://coupler-medinamaria90.eu.pythonanywhere.com/',
-            'onclick_function': '',
-        },
-        {
-            'title': 'Bestseller Website',
-            'image': '../static/images/robot.png',
-            'description': "I developed a custom e-learning platform integrated into a WordPress website. Utilized WordPress and customized existing plugins using a child theme. PHP, HTML, CSS, JavaScript.",
-            'button_text': 'Go to project',
-            'url': 'https://www.currocanete.com/',
-            'onclick_function': '',
-        },
-        {
-            'title': 'Seo-Tool',
-            'image': '../static/images/seo.png',
-            'description': "This application uses web scraping (Selenium) and a user-friendly GUI (python) to track Google rankings for multiple keywords across hundreds of clients, saving SEO technicians valuable time each month.",
-            'button_text': 'More info',
-            'url': seo_url,
-            'onclick_function': '',
-        },
-        {
-            'title': 'ChatBot',
-            'image': '../static/images/robot.png',
-            'description': "I implemented Bot-tastic, a custom chatbot powered by OpenAI! Ask Bot-tastic anything about my experience as a developer. It's a user-friendly way to learn more about my skills and expertise.",
-            'button_text': 'Test it',
-            'url': '#projects',
-            'onclick_function': 'openForm()',
-        },
-    ]
-
-    return render_template("projects.html", year = current_year, cards=cards)
+    return render_template("projects.html", year = current_year)
 
 @app.route("/forgot_password",  methods=["GET", "POST"])
 def forgot_password():
@@ -241,7 +205,6 @@ def api_login():
         data = request.get_json()
         email = data.get('email')
         access_token = data.get('access_token')
-        # response = ModelUser.api_login(token, email)
         response = ModelUser.api_login(access_token, email)
         return jsonify(response), 200
 @csrf.exempt
@@ -317,6 +280,7 @@ def logout():
 
 @app.route("/chatting", methods=["POST"])
 def chat():
+    production = True
     if production == False:
         time.sleep(1.5)
         return "ChatBot: ¡Claro! En MMC programacion ofrecemos servicios de desarrollo de aplicaciones. Si deseas obtener más información, por favor escríbenos un mail."

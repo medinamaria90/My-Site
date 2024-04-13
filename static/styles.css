@@ -8,12 +8,9 @@ height: 100vh;
 width: 100vw;
 }
 
-
-
 .red{
 color:red;
 }
-
 
 nav.navbar{
     padding:0em 5em 0em 5em;
@@ -22,7 +19,6 @@ nav.navbar{
 
 .navbar ul.navbar-nav {
 white-space: nowrap;
-
 }
 
 ul.navbar-nav li.navbar-item{
@@ -43,10 +39,9 @@ li.navbar-item a.nav-link.black{
     color:black;
 }
 
-
 li.navbar-item a.nav-link:hover {
     font-weight:700;
-    color:#fff
+    color:#fff;
     text-decoration:none
 }
 
@@ -55,19 +50,12 @@ li.navbar-item a.active{
     color:#fff
 }
 
-
-
 .navbar-toggler-icon{
     background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-
 }
-
 
 .color_lightblue{
     color:#207bbc
-}
-
-.home_container {
 }
 
 .home_page{
@@ -79,8 +67,6 @@ li.navbar-item a.active{
 }
 
 
-
-
 .all_web_container{
     margin:5em 10em 3em 17em
 }
@@ -90,6 +76,7 @@ li.navbar-item a.active{
     /*align-items: center; */
     display: flex;
 }
+
 #info .row {
     align-items: center;
 }
@@ -98,12 +85,6 @@ li.navbar-item a.active{
 padding-right:8em;
 margin-bottom:1em
 }
-
-
-
-
-
-
 
 .form-control{
     margin-bottom:0.5em;
@@ -117,30 +98,23 @@ div.medium_container{
     max-width:28em;
 }
 
-
 div.small_container{
     max-width:23em;
 }
-
-
 
 a{
     font-size: 1em !important;
     color:black;
 }
 
-
 div div.text_block{
     margin-top: 5em;
     margin-bottom: 5em;
-    padding:auto
-    overflow:auto
+    padding:auto;
+    overflow:auto;
     margin: auto;
 }
 
-#projects{
-    
-}
 p {
     color:white;
 }
@@ -150,8 +124,8 @@ p {
 }
 
 .back_to_top:hover{
-    color:var(--info_dark_blue)
-    text-decoration:var(--dark_pink)
+    color:var(--info_dark_blue);
+    text-decoration:var(--dark_pink);
 }
 
 #programming{
@@ -410,18 +384,16 @@ section div div.card_top.card-header{
 }
 
 .media-chat .media-body p.meta{
-    background-color:transparent!important;
+    background-color:transparent !important;
     padding:0;
-    opacity:.8
 }
 
 div div.media-chat{
     display:flex;
     padding:10px 15px 10px 15px;
     -webkit-transition:background-color .2s linear;
-    transition:background-color .2s linear
-    margin-bottom:0;
-    word-break: break-word
+    transition:background-color .2s linear;
+
 }
 
 div div img.avatar{
@@ -436,17 +408,13 @@ div div img.avatar{
     text-align:center;
     border-radius:10%;
     color:#8b95a5;
-    text-transform:uppercase
+    text-transform:uppercase;
 }
 
 .chatbot_title{
 margin-bottom:0px;
 padding-bottom:0px;
 }
-
-#arrow_div{
-}
-
 
 .publisher{
     position:relative;
@@ -488,7 +456,7 @@ div input.publisher-input{
 }
 
 #chatbot_box{
-    max-width:490px;
+    width:400px;
     margin-left: auto;
     margin-right: auto;
     display: none;
@@ -528,7 +496,7 @@ div input.publisher-input{
     padding: 8em 19em 8em 19em;
 }
 .projects_section{
-    padding: 7em 13em 8em 13em;
+    padding: 7em 13em 7em 13em;
 }
 
 .section_title{
@@ -553,11 +521,6 @@ div input.publisher-input{
     font-family: 'JetBrains Mono', monospace ;
     font-weight:500;
     background-color:#eef7f6;
-}
-
-.media-chat.media-chat-reverse .media-body{
-    tex-align:right;
-
 }
 
 .media-chat.media-chat-reverse .media-body p{
@@ -586,11 +549,9 @@ div div#chat-content{
     padding-top:11px;
 }
 
-
 div a.seo_button_style{
 min-width:15em;
 }
-
 
 ol.seo_ol {
 	list-style-type: none;
@@ -612,8 +573,18 @@ li.seo_li:before {
 
 
 @media (max-width:680px){
+    #coding_design{
+        text-align: center;
+    }
+    #subtitle{
+        font-size: 1em;
+    }
+    .section_title{
+        font-weight: 700 !important;
+        font-size:2em;
+    }
     .projects_section{
-        padding: 7em 1em 5em 1em;
+        padding: 7em 1em 1em 1em;
     }
     .about_section {
         padding: 6em 1em 1em 1.2em;
@@ -630,9 +601,7 @@ li.seo_li:before {
         padding:.5em 0 .5em 2em;
         margin:0
     }
-    .seo_video{
-
-    }
+  
 
     .seo_video_mp4{
     width:90%;

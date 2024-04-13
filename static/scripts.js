@@ -80,44 +80,4 @@ $(document).ready(function() {
 
 
 
-//Script to display some text
-function displaytext(){
-const programmingHeading = document.getElementById("programming_h5");
-  const moreProjectsHeading = document.getElementById("more_projects_");
-  const programmingText = "Back-end development (Flask, MySql), linux, virtual machines, bash scripting. C language. Tasks automation, web scraping. HTML, CSS, Javascript, and more. Go check my projects and try my chatbot!";
-  const moreProjectsText = "More projects on the way =)";
-  let iProgramming = 0;
-  let iMoreProjects = 0;
-  let delay = 60; // Delay in milliseconds
-  function displayProgrammingText() {
-    if (iProgramming < programmingText.length) {
-      programmingHeading.textContent = programmingText.substring(0, iProgramming+1);
-      iProgramming++;
-      setTimeout(displayProgrammingText, delay);
-    } else {
-      // Reset text when done
-      setTimeout(() => {
-        programmingHeading.textContent = "";
-        iProgramming = 0;
-        displayProgrammingText();
-      }, 2500); // Delay before resetting in milliseconds
-    }
-  }
-  function displayMoreProjectsText() {
-    if (iMoreProjects < moreProjectsText.length) {
-      moreProjectsHeading.textContent = moreProjectsText.substring(0, iMoreProjects+1);
-      iMoreProjects++;
-      setTimeout(displayMoreProjectsText, delay);
-    } else {
-      // Reset text when done
-      setTimeout(() => {
-        moreProjectsHeading.textContent = "";
-        iMoreProjects = 0;
-        displayMoreProjectsText();
-      }, 2500); // Delay before resetting in milliseconds
-    }
-  }
-  displayProgrammingText();
-  displayMoreProjectsText();
-}
 

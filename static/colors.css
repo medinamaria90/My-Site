@@ -1,4 +1,5 @@
 :root {
+  --light_blue_pastel : #a5f3fc;
   --grey-blue : #AAD7D9;
   --dark_violeta: rgb(17 24 39);
   --clear_violeta: rgb(31 41 55);
@@ -31,7 +32,6 @@ color:var(--light_blue)
 color:white;
 }
 
-
 .info_dark_blue_bg{
 background-color:var(--info_dark_blue) !important;
 }
@@ -55,14 +55,22 @@ background-color:var(--dark_blue)
 background-color:var(--light_blue)
 }
 
-
 .grey_blue_bg{
   background-color:var(--grey-blue)
-  }
+}
 
 .grey_blue_col{
   color:var(--grey-blue)
-  }
+}
+
+.light_blue_pastel_color{
+  color:var(--light_blue_pastel) !important;
+
+}
+
+.white_color{
+  color:white;
+}
 
 .white_bg{
 background-color:white
