@@ -3,172 +3,209 @@
 {% block content %}
 <!--      NAV BAR -->
 {% include "navbar.html" %}
+
+{% include "chatbot_popup.html" %}
+{% include "footer.html" %}
+
 <img id="btn_chatbot" onclick="openForm()" src="../static/images/robot.png">
 
 <section class="projects_section clear_violeta_bg">
-    <div class="container projects_container"></div>
-        <h1 class=" pb-3 section_title">Projects Completed</h1>
-        <div class="row dark_violeta_bg rounded mt-3 mb-3">
+  <h1 class=" pb-3 section_title">Projects Completed</h1>
 
-            <div class="video col-lg-5 col-12 ps-lg-4 pt-4 mb-4 project_img">
-                <video style="object-fit: cover;" autoplay loop muted class="rounded img_project"  src="../static/images/Coupler.mp4">
-            </div>
-            <br>
-            
-            <div style="color:#a5f3fc" class="col-lg-6 col-12 mt-4">
-                <h5> Coupler - The web-app for making friends </h5>
-                <p class="mt-3"> Web application for making new connections and meeting friends with a wealth of functionalities.
-                </p>
-                <p>
-                    Includes registration with confirmation email, login with Google, functional and comprehensive profile management (upload & delete photos), a matches system (you can open a conversation after a mutual like), and an real time chat system with sockets IO. Utilizes an SQL database.
-                    Built using Python and Django, with JavaScript, bootstrap, CSS, and HTML. 
-                </p>
-                <div class="">
-                    <button type="button" class="mt-1 btn btn-primary">
-                        Python
-                      </button>
-                      <button type="button" class="mt-1 btn btn-primary">
-                        Javascript
-                      </button>
-                      <button type="button" class="mt-1 btn btn-primary">
-                        SQL
-                      </button>
-                      <button type="button" class="mt-1 btn btn-primary">
-                        Django
-                      </button>
-                      <button type="button" class="mt-1  btn btn-danger">
-                        <a style="color:white" target="_blank" href="https://coupler-medinamaria90.eu.pythonanywhere.com/"> Go to Demo </a>
-                      </button>   
-                </div>
-
-            </div>
-        </div>
-
-        <div class="row dark_violeta_bg rounded mt-3">
-
-            <div class="video col-lg-5 col-12 ps-lg-4 pt-4 pb-4">
-                <video style="object-fit: cover;" autoplay loop muted class="rounded img_project" src="../static/images/SEO_VIDEO.mp4">
-            </div>
-            <br>
-            
-            <div style="color:#a5f3fc" class="col-lg-6 col-12 mt-4">
-                <h5> Seo-Traker: Monitor Your Keyword Rankings  </h5>
-                <p class="mt-3"> Seo-Traker is a user-friendly desktop application designed to simplify keyword rank tracking for SEO agencies. With a connection to a server, Seo-Traker verifies your subscription and empowers you to analyze your Google keyword positions.
-                <p>
-                    Intuitive GUI (powered by tkinter), web scraping with Selenium, and data management using Pandas. Plus, automatic license verification.
-                </p>
-                <div class=mb-3>
-                  <button type="button" class="mt-1 btn btn-primary">
-                    Python
-                  </button>
-                  
-                  <button type="button" class="mt-1 btn btn-primary">
-                    Selenium
-                  </button>
-                  <button type="button" class="mt-1 btn btn-primary">
-                    SQL
-                  </button>
-                  <button type="button" class="mt-1 btn btn-primary">
-                    Flask
-                  </button>
-                  <button type="button" class="mt-1 btn btn-danger">
-                    <a style="color:white" target="_blank" href="https://www.mmcprojects.dev/seo"> Go to App </a>
-                  </button>   
-                </div>
-            </div>
-        </div>
-
-        <div class="row dark_violeta_bg rounded mt-3">
-
-            <div class="video col-lg-5 col-12 ps-lg-4 pt-4 pb-4">
-                <img style=""  class="rounded img_project" width="422"  src="../static/images/curro_web.png">
-            </div>
-            <br>
-            
-            <div style="color:#a5f3fc" class="col-lg-6 col-12 mt-4">
-                <h5> Curro Cañete Website & Online Academy  </h5>
-                <p class="mt-3"> Developed a website for a renowned author and an online academy.
-                <p>
-                Wordpress and customized php templates to meet client requirements. Implemented a customized online academy within the website, offering courses for sale to the author's followers. E-commerce solutions. PHP, JavaScript, HTML, and CSS.
-                </p>
-                <div class=mb-3>
-                  <button type="button" class="mt-1 btn btn-primary">
-                    PHP
-                  </button>
-                  
-                  <button type="button" class="mt-1 btn btn-primary">
-                    HTML
-                  </button>
-                  <button type="button" class="mt-1 btn btn-primary">
-                    CSS
-                  </button>
-                  <button type="button" class="mt-1 btn btn-primary">
-                    Wordpress
-                  </button>
-                  <button type="button" class="mt-1 btn btn-danger">
-                    <a style="color:white" target="_blank" href="https://www.currocanete.com"> Go to Site </a>
-                  </button> 
-            </div>
-
-            </div>
-        </div>
-
-        <div class="row dark_violeta_bg rounded mt-3">
-
-            <div class="video col-lg-5 col-12 ps-lg-4 pt-4 pb-4">
-                <img style=""  class="rounded img_project" width="422"  src="../static/images/botastic.png">
-            </div>
-            <br>
-            
-            <div style="color:#a5f3fc" class="col-lg-6 col-12 mt-4">
-                <h5> Chatbot assintant with OpenIA  </h5>
-                <p class="mt-3"> Deployed a chatbot assintant using GPT3 techology and OPEN IA API.
-                <p>
-                    Designed with vanilla JavaScript, HTML, and CSS. It answers questions about my experience and knowledge. Feel free to ask questions, but be aware that the information may not always be up-to-date and could be inaccurate. Works with a context I've provided and a set of instructions.
-                </p>
-                <div class=mb-3>
-                  <button type="button" class="mt-1 btn btn-primary">
-                    OPEN AI
-                  </button>
-                  
-                  <button type="button" class="mt-1 btn btn-primary">
-                    HTML
-                  </button>
-                  <button type="button" class="mt-1 btn btn-primary">
-                    CSS
-                  </button>
-                  <button type="button" class="mt-1 btn btn-primary">
-                    JAVASCRIPT
-                  </button>
-                  <button type="button" class="mt-1 btn btn-danger">
-                    <a style="color:white"  target="_blank" onclick="openForm()"> Open ChatBot </a>
-                  </button> 
-            </div>
-
-            </div>
-        </div>
+  <!-- Coupler -->
+  <div class="row dark_violeta_bg rounded mt-3 mb-3">
+    <div class="video col-lg-5 col-12 ps-lg-4 pt-4 mb-4 project_img">
+        <video style="object-fit: cover;" autoplay loop muted class="rounded img_project"  src="../static/images/Coupler.mp4">
     </div>
+    <br>
+    <div style="color:#a5f3fc" class="col-lg-6 col-12 mt-4">
+      <h5> Coupler - The web-app for making friends </h5>
+      <p class="mt-3"> Web application for making new connections and meeting friends with a wealth of functionalities.
+      </p>
+      <p>
+          Includes registration with confirmation email, login with Google, functional and comprehensive profile management (upload & delete photos), a matches system (you can open a conversation after a mutual like), and an real time chat system with sockets IO. Utilizes an SQL database.
+          Built using Python and Flask, with JavaScript, bootstrap, CSS, and HTML. 
+      </p>
+      <div class="">
+        <button type="button" class="mt-1 btn btn-primary">
+            Python
+        </button>
+        <button type="button" class="mt-1 btn btn-primary">
+          Javascript
+        </button>
+        <button type="button" class="mt-1 btn btn-primary">
+          SQL
+        </button>
+        <button type="button" class="mt-1 btn btn-primary">
+          Django
+        </button>
+        <button type="button" class="mt-1  btn btn-danger">
+          <a style="color:white" target="_blank" href="https://coupler-medinamaria90.eu.pythonanywhere.com/"> Go to Demo </a>
+        </button>   
+      </div>
+    </div>
+  </div>
+
+  <!-- SEO TRACKER -->
+  <div class="row dark_violeta_bg rounded mt-3">
+      <div class="video col-lg-5 col-12 ps-lg-4 pt-4 pb-4">
+          <video style="object-fit: cover;" autoplay loop muted class="rounded img_project" src="../static/images/SEO_VIDEO.mp4">
+      </div>
+      <br>
+      <div style="color:#a5f3fc" class="col-lg-6 col-12 mt-4">
+          <h5> Seo-Traker: Monitor Your Keyword Rankings  </h5>
+          <p class="mt-3"> Seo-Traker is a user-friendly desktop application designed to simplify keyword rank tracking for SEO agencies. With a connection to a server, Seo-Traker verifies your subscription and empowers you to analyze your Google keyword positions.
+          <p>
+              Intuitive GUI (powered by tkinter), web scraping with Selenium, and data management using Pandas. Plus, automatic license verification.
+          </p>
+          <div class=mb-3>
+            <button type="button" class="mt-1 btn btn-primary">
+              Python
+            </button>
+            
+            <button type="button" class="mt-1 btn btn-primary">
+              Selenium
+            </button>
+            <button type="button" class="mt-1 btn btn-primary">
+              SQL
+            </button>
+            <button type="button" class="mt-1 btn btn-primary">
+              Flask
+            </button>
+            <button type="button" class="mt-1 btn btn-danger">
+              <a style="color:white" target="_blank" href="https://www.mmcprojects.dev/seo"> Go to App </a>
+            </button>   
+          </div>
+      </div>
+  </div>
+
+  <!-- API GITHUB -->
+  <div class="row dark_violeta_bg rounded mt-3">
+    <div class="video col-lg-5 col-12 ps-lg-4 pt-4 pb-4">
+      <img style=""  class="rounded img_project" width="422"  src="../static/images/getRepos.png">
+    </div>
+    <br>
+    <div style="color:#a5f3fc" class="col-lg-6 col-12 mt-4">
+      <h5> Rest API with Django REST Framework & GitHub API </h5>
+      <p class="mt-3"> 
+        In this straightforward project, I utilized the Django REST Framework to construct a REST API integrated with the GitHub API. 
+        This API facilitates both data retrieval and manipulation within the database while adhering to RESTful principles. 
+        Each endpoint serves a distinct purpose, enhancing clarity and maintainability in the codebase.
+      <p> Utilizing the GitHub API, the application dynamically retrieves information about GitHub users and nd stores their repositories in our database. 
+        The project provides six endpoints: two for retrieving database information, two for modifying data after backing up GitHub repositories, 
+        and two for deleting entries.
+      </p>
+      <div class=mb-3>
+        <button type="button" class="mt-1 btn btn-primary">
+          Python
+        </button>
+        <button type="button" class="mt-1 btn btn-primary">
+          Django Rest Framework
+        </button>
+        <button type="button" class="mt-1 btn btn-primary">
+          SQL
+        </button>
+        <button type="button" class="mt-1 btn btn-primary">
+          GITHUB API
+        </button>
+        <button type="button" class="mt-1 btn btn-danger">
+          <a style="color:white" target="_blank" href="https://github.com/medinamaria90/Rest_API_django"> Go to Repo </a>
+        </button>   
+      </div>
+    </div>
+  </div>
+
+  <!-- CURRO CAÑETE -->
+  <div class="row dark_violeta_bg rounded mt-3">
+      <div class="video col-lg-5 col-12 ps-lg-4 pt-4 pb-4">
+          <img style=""  class="rounded img_project" width="422"  src="../static/images/curro_web.png">
+      </div>
+      <br>
+      
+      <div style="color:#a5f3fc" class="col-lg-6 col-12 mt-4">
+          <h5> Curro Cañete Website & Online Academy  </h5>
+          <p class="mt-3"> Developed a website for a renowned author and an online academy.
+          <p>
+          Wordpress and customized php templates to meet client requirements. Implemented a customized online academy within the website, 
+          offering courses for sale to the author's followers. E-commerce personalized solutions, child theme personalization. 
+          <br><br>PHP, JavaScript, HTML, CSS & wordpress. Project hosted in Siteground.
+          </p>
+          <div class=mb-3>
+            <button type="button" class="mt-1 btn btn-primary">
+              PHP
+            </button>
+            
+            <button type="button" class="mt-1 btn btn-primary">
+              HTML
+            </button>
+            <button type="button" class="mt-1 btn btn-primary">
+              CSS
+            </button>
+            <button type="button" class="mt-1 btn btn-primary">
+              Wordpress
+            </button>
+            <button type="button" class="mt-1 btn btn-danger">
+              <a style="color:white" target="_blank" href="https://www.currocanete.com"> Go to Site </a>
+            </button> 
+      </div>
+
+      </div>
+  </div>
+
+  <!-- CHATBOT -->
+  <div class="row dark_violeta_bg rounded mt-3">
+      <div class="video col-lg-5 col-12 ps-lg-4 pt-4 pb-4">
+          <img style=""  class="rounded img_project" width="422"  src="../static/images/botastic.png">
+      </div>
+      <br>
+      
+      <div style="color:#a5f3fc" class="col-lg-6 col-12 mt-4">
+          <h5> Chatbot assintant with OpenIA  </h5>
+          <p class="mt-3"> Deployed a chatbot assintant using GPT3 techology and OPEN IA API.
+          <p>
+              Designed with vanilla JavaScript, HTML, and CSS. Back-end with python and Flask. It answers questions about my experience 
+              and knowledge. Feel free to ask questions, but be aware that the information may not always be up-to-date and could be inaccurate.
+              <br><br>Works with a context I've provided and a set of instructions.
+          </p>
+          <div class=mb-3>
+            <button type="button" class="mt-1 btn btn-primary">
+              OPEN AI
+            </button>
+            
+            <button type="button" class="mt-1 btn btn-primary">
+              HTML
+            </button>
+            <button type="button" class="mt-1 btn btn-primary">
+              CSS
+            </button>
+            <button type="button" class="mt-1 btn btn-primary">
+              JAVASCRIPT
+            </button>
+            <button type="button" class="mt-1 btn btn-danger">
+              <a style="color:white"  target="_blank" onclick="openForm()"> Open ChatBot </a>
+            </button> 
+      </div>
+
+      </div>
+  </div>
+
 </section>
-<div>
 
-    {% include "chatbot_popup.html" %}
-    {% include "footer.html" %}
+<script>
+window.onscroll = function() { toggleChatbotButtonVisibility() };
 
-    <script>
-    window.onscroll = function() { toggleChatbotButtonVisibility() };
-
-    function toggleChatbotButtonVisibility() {
-        var chatbotButton = document.getElementById("btn_chatbot");
-        if (document.documentElement.scrollTop > 300 || document.body.scrollTop > 300) {
-            chatbotButton.style.display = "block";
-        } else {
-            chatbotButton.style.display = "none";
-        }
+function toggleChatbotButtonVisibility() {
+    var chatbotButton = document.getElementById("btn_chatbot");
+    if (document.documentElement.scrollTop > 300 || document.body.scrollTop > 300) {
+        chatbotButton.style.display = "block";
+    } else {
+        chatbotButton.style.display = "none";
     }
+}
 
 
-    </script>
+</script>
 
 
-    {% endblock content %}
+{% endblock content %}
 
