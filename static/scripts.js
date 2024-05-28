@@ -47,12 +47,10 @@ $(document).ready(function() {
     $("#message-input").val("");
     $("#chat-content").append(userHtml);
     // Show the loader element
-    console.log("Before AJAX request"); // Print a message before making the AJAX request
     $("#loader").show();
     $("#text_now").hide();
     $("#message-input").prop("disabled", true);
     var token = $("input[name='csrf_token']").attr('value')
-    console.log(token); // Print the token so we check it works
     //En el HTML he generado un token csrf, en un input oculto. Ahora lo envío como header del ajax request.
     $.ajaxSetup({
         beforeSend: function(xhr, settings) {
@@ -68,7 +66,6 @@ $(document).ready(function() {
       type: "POST",
       url: "/chatting",
     }).done(function(data) {
-      console.log("Received response from server:", data); // Print the response from the server
       var botHtml = '<div class="media-chat"><img class="avatar" src="../static/images/robot.png" alt="..."><div class="media-body"><p class="chat_font">' + data + '</p><p class="meta"></p></div></div>';
       $("#chat-content").append($.parseHTML(botHtml));
       $("#loader").hide();
