@@ -266,8 +266,11 @@ def chat():
                 messages=messages
             )
             answer = response['choices'][0]['message']['content']
+            print(request.form['msg'])
+            print(answer)
             return answer
         except Exception as e:
+            print(e)
             return "Sorry, I'm am not avaliable right now. Please try again."
 
 
