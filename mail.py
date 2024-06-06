@@ -4,10 +4,10 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 import base64
 from google.oauth2.credentials import Credentials
-from models.ModelUsers import ModelUser
 
 SCOPES = ["https://www.googleapis.com/auth/gmail.send"]
 
+token = "/home/medinamaria90/mysite/token.json"
 
 class EmailSender:
     def __init__(self, email, link=None):
@@ -19,9 +19,14 @@ class EmailSender:
         self.toadmin = False
 
     def send_message(self):
-        print("In send msje")
         if os.path.exists("token.json"):
             creds = Credentials.from_authorized_user_file("token.json", SCOPES)
+        else:
+            try:
+                creds = Credentials.from_authorized_user_file(token, SCOPES)
+            except Exception as e:
+                print(e)
+
         try:
             service = build("gmail", "v1", credentials=creds)
             message = EmailMessage()

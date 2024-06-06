@@ -1,3 +1,8 @@
 .env
 *.pyc
 myenv/*
+myenv
+client_secret.json
+migrations/*
+myenv copy
+token.json
