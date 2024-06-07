@@ -7,7 +7,7 @@
 {% include "chatbot_popup.html" %}
 {% include "footer.html" %}
 
-<img id="btn_chatbot" onclick="openForm()" src="../static/images/robot.png">
+<img class="chatbot_img" id="btn_chatbot" onclick="openForm()" src="../static/images/bot.png">
 
 <section class="projects_section clear_violeta_bg">
   <h1 class=" pb-3 section_title">Projects Completed</h1>
@@ -192,7 +192,7 @@
           </p>
           <div>
             <button type="button" class="mt-1 btn btn-primary">
-              OPEN AI
+              OpenAi API
             </button>
             
             <button type="button" class="mt-1 btn btn-primary">
@@ -202,7 +202,7 @@
               CSS
             </button>
             <button type="button" class="mt-1 btn btn-primary">
-              JAVASCRIPT
+              JavaScript
             </button>
             <button type="button" class="mt-1 btn btn-danger">
               <a style="color:white"  target="_blank" onclick="openForm()"> Open ChatBot </a>
@@ -220,7 +220,7 @@ window.onscroll = function() { toggleChatbotButtonVisibility() };
 
 function toggleChatbotButtonVisibility() {
     var chatbotButton = document.getElementById("btn_chatbot");
-    if (document.documentElement.scrollTop > 300 || document.body.scrollTop > 300) {
+    if (document.documentElement.scrollTop > 50 || document.body.scrollTop > 50) {
         chatbotButton.style.display = "block";
     } else {
         chatbotButton.style.display = "none";

@@ -1,90 +1,108 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% block head %} {% endblock head %} {% block content
+%}
 
-{% block head %}
-
-{% endblock head %}
-
-
-{% block content %}
-
-
-<img id="btn_chatbot" onclick="openForm()" src="../static/images/robot.png">
+<img id="btn_chatbot" onclick="openForm()" src="../static/images/robot.png" />
 
 <div>
-<!--      NAV BAR -->
-{% include "navbar.html" %}
-<section class="section d-flex align-items-center clear_violeta_bg" id="home">
+  <!--      NAV BAR -->
+  {% include "navbar.html" %}
+  <section class="section d-flex align-items-center clear_violeta_bg" id="home">
     <div class="container">
-        <div class="row home_container">
-            <div class="container col-lg-5 mtl_8 mbl_5 pll_3 mll_8" id="coding_design">
-                <div class="container mtl_1">
-                    <div class="subtitle">
-                        <h5 id="subtitle">Hi, I am Maria Medina, I am a</h5>
-                    </div>
-                    <div id="titles">
-                        <h1 class="titlestyle light_blue_pastel_color" id="title1"> Back End</h1>
-                        <h1 class="titlestyle" id="title2"> developer</h1>
-                    </div>
-                    <div >
-                        <h5 class="mt-3 grey_blue_col second_subtitle">Continously learning
-                            & <br>seeking new opportunities</h5>
-                    </div>
-                </div>
-                <div class="mtl_2 mls_1 mll_1 pl_05 mts_1 mbs_2 ml_1" id="buttons">
-                    <a class="round_button mr_1"
-                       href="https://www.linkedin.com/in/mariamedinacanete/"
-                       target="_blank">
-                        <img src="../static/images/linkedin.png"
-                             style=" width:20px">
-                    </a>
-                    <a class="round_button mr_1"
-                       href="mailto:medinamaria90@gmail.com">
-                        <img src="../static/images/gmail.png"
-                             style="width:22px">
-                    </a>
-                    <a class="round_button mr_1"
-                        target="_blank"
-                        href="https://github.com/medinamaria90">
-                        <img src="../static/images/github.png"
-                             style="width:22px">
-                    </a>
-                    <a class="round_button mrl_1"
-                        target="_blank"
-                        href="../static/images/CVMMC.pdf">
-                         <img src="../static/images/curriculum-vitae.png"
-                              style="width:22px">
-                    </a>
-                    
-                </div>
+      <div class="row home_container">
+        <div
+          class="container col-lg-5 mtl_8 mbl_5 pll_3 mll_8"
+          id="coding_design"
+        >
+          <div class="mtl_1">
+            <div class="subtitle">
+              <h5 id="subtitle">Hi, I am Maria Medina, I am a</h5>
             </div>
-            <div class="col-lg-5 mtl_8 mbl_5" id="coding_gif">
-                <div class="home_video">
-                    <video autoplay class="coding_video" loop muted src="../static/images/video.mp4"></video>
-                </div>
+            <div id="titles">
+              <h1 class="titlestyle light_blue_pastel_color" id="title1">
+                Back End
+              </h1>
+              <h1 class="titlestyle" id="title2">developer</h1>
             </div>
-
+            <div>
+              <h5 class="mt-3 grey_blue_col second_subtitle">
+                Continously learning & <br />seeking new opportunities
+              </h5>
+            </div>
+          </div>
+          <div class="" id="buttons">
+            <a
+              class="round_button m-2"
+              href="https://www.linkedin.com/in/mariamedinacanete/"
+              target="_blank"
+            >
+              <img src="../static/images/linkedin.png" style="width: 25px" />
+            </a>
+            <a class="round_button m-2" href="mailto:medinamaria90@gmail.com">
+              <img src="../static/images/gmail.png" style="width: 25px" />
+            </a>
+            <a
+              class="round_button m-2"
+              target="_blank"
+              href="https://github.com/medinamaria90"
+            >
+              <img src="../static/images/github.png" style="width: 25px" />
+            </a>
+            <a
+              class="round_button m-2"
+              target="_blank"
+              href="../static/images/CVMMC.pdf"
+            >
+              <img
+                src="../static/images/curriculum-vitae.png"
+                style="width: 25px"
+              />
+            </a>
+            <button
+              class="round_button m-2"
+              target="_blank"
+              onclick="openForm()"
+            >
+              <img src="../static/images/bot.png" style="width: 25px" />
+            </button>
+          </div>
         </div>
-        <script>showTitle()</script>
+
+        <div class="col-lg-5 mtl_8 mbl_5" id="coding_gif">
+          <div class="home_video">
+            <video
+              autoplay
+              class="coding_video"
+              loop
+              muted
+              src="../static/images/video.mp4"
+            ></video>
+          </div>
+        </div>
+      </div>
+      <script>
+        showTitle();
+      </script>
     </div>
-</section>
+  </section>
+  {% include "chatbot_popup.html" %} {% include "footer.html" %}
 
-    {% include "footer.html" %}
-
-    <script>
-    window.onscroll = function() { toggleChatbotButtonVisibility() };
+  <script>
+    window.onscroll = function () {
+      toggleChatbotButtonVisibility();
+    };
 
     function toggleChatbotButtonVisibility() {
-        var chatbotButton = document.getElementById("btn_chatbot");
-        if (document.documentElement.scrollTop > 300 || document.body.scrollTop > 300) {
-            chatbotButton.style.display = "block";
-        } else {
-            chatbotButton.style.display = "none";
-        }
+      var chatbotButton = document.getElementById("btn_chatbot");
+      if (
+        document.documentElement.scrollTop > 300 ||
+        document.body.scrollTop > 300
+      ) {
+        chatbotButton.style.display = "block";
+      } else {
+        chatbotButton.style.display = "none";
+      }
     }
+  </script>
 
-
-    </script>
-
-
-    {% endblock content %}
-
+  {% endblock content %}
+</div>

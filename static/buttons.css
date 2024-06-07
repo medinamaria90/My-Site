@@ -1,73 +1,71 @@
-
-
 .button {
-display:inline-block;
-color: #fff;
-min-width: 7em;
-padding: 0.4em 1em 0.4em 1em;
-border:0;
-font-size:1.1em;
-border-radius: 5px;
-text-decoration: none;
-font-family:'Karla', sans-serif;
-font-weight:500;
+  display: inline-block;
+  color: #fff;
+  min-width: 7em;
+  padding: 0.4em 1em 0.4em 1em;
+  border: 0;
+  font-size: 1.1em;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: "Karla", sans-serif;
+  font-weight: 500;
 }
 
-a.button{
-text-align: center;
+a.button {
+  text-align: center;
 }
 
 .button.lg_button {
-font-size: 1.25rem;
+  font-size: 1.25rem;
 }
 
 .button.sm_button {
-margin: 0em 0.5em 0em 0.5em;
-min-width:6em;
+  margin: 0em 0.5em 0em 0.5em;
+  min-width: 6em;
 }
 
-.button.very_rounded{
-border-radius: 15px;
+.button.very_rounded {
+  border-radius: 15px;
 }
 
 .button:hover {
-background-color:var(--info_dark_blue);
-color:#fff;
+  background-color: var(--info_dark_blue);
+  color: #fff;
 }
 
-.button.dark{
-background-color:white;
-color:black;
-text-decoration:none;
-font-weight:400;
+.button.dark {
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  font-weight: 400;
 }
 
-.round_button{
-display:inline-block;
-color: #fff;
-min-width: 2.8em;
-text-align:center;
-padding: 0.6em 0.6em 0.6em 0.6em;
-border:0;
-border-radius: 100px;
-text-decoration: none;
-font-family:'Karla', sans-serif;
-background-color:white;
-color:black;
-text-decoration:none;
-font-weight:400;
+.round_button {
+  display: inline-block;
+  color: #fff;
+  min-width: 2.8em;
+  text-align: center;
+  padding: 0.5em 0.4em 0.5em 0.4em;
+  border: 0;
+  border-radius: 100px;
+  text-decoration: none;
+  font-family: "Karla", sans-serif;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  font-weight: 400;
 }
 
-.button.dark:hover{
-background-color:var(--light_blue);
+.button.dark:hover {
+  background-color: var(--light_blue);
 }
 
-.white_button_info_blue{
-border:1px solid;
-background-color:transparent;
-color:var(--info_dark_blue);
-border-color: var(--info_blue);
-text-decoration: none;
+.white_button_info_blue {
+  border: 1px solid;
+  background-color: transparent;
+  color: var(--info_dark_blue);
+  border-color: var(--info_blue);
+  text-decoration: none;
 }
 
 #btn-back-to-top {
@@ -76,12 +74,12 @@ text-decoration: none;
   right: 30px;
   display: none;
   border-radius: 100px;
-  width:2.8em;
-  height:2.8em;
-  padding:0
+  width: 2.8em;
+  height: 2.8em;
+  padding: 0;
 }
 
-#arrowDown{
+#arrowDown {
   position: relative;
   width: 50px;
   height: 50px;
@@ -94,13 +92,14 @@ text-decoration: none;
   -webkit-transition: 0.2s;
 }
 
-#arrowDown:hover, .hover_button{
+#arrowDown:hover,
+.hover_button {
   box-shadow: 0px 0px 5px 2px var(--info_dark_blue);
   transition: 0.3s;
   -webkit-transition: 0.3s;
 }
 
-#arrowDown:before{
+#arrowDown:before {
   position: absolute;
   top: calc(50% - 9px);
   left: calc(50% - 7px);
@@ -119,19 +118,18 @@ text-decoration: none;
   }
 }
 
-#btn_chatbot{
+#btn_chatbot {
   position: fixed;
   bottom: 50px;
   right: 30px;
   display: none;
-  width:4em;
-  height:4em;
-  padding:0;
+  height: 4em;
+  padding: 0;
   transition: 0.4s;
-  z-index:999
+  z-index: 999;
 }
 
-#btn_chatbot:hover{
-  height:4.5em;
-  width:4.5em;
+#btn_chatbot:hover {
+  cursor: pointer;
+  height: 4.5em;
 }

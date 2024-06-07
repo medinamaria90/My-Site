@@ -66,7 +66,7 @@ $(document).ready(function() {
       type: "POST",
       url: "/chatting",
     }).done(function(data) {
-      var botHtml = '<div class="media-chat"><img class="avatar" src="../static/images/robot.png" alt="..."><div class="media-body"><p class="chat_font">' + data + '</p><p class="meta"></p></div></div>';
+      var botHtml = '<div class="media-chat"><img class="avatar" src="../static/images/bot.png" alt="..."><div class="media-body"><p class="chat_font">' + data + '</p><p class="meta"></p></div></div>';
       $("#chat-content").append($.parseHTML(botHtml));
       $("#loader").hide();
       $("#text_now").show();
