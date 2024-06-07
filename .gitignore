@@ -4,5 +4,5 @@ myenv/*
 myenv
 client_secret.json
 migrations/*
-myenv copy
+myenv/*
 token.json
