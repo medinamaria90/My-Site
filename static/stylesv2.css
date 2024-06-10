@@ -263,6 +263,9 @@ div a.btn.btn-primary.btn-home.btn-lg {
   font-family: "Ubuntu", sans-serif;
   font-size: 1.1rem;
 }
+.project-card{
+  max-width: 1400px;
+}
 
 /* MY PROJECTS SOLUTION CARDS*/
 

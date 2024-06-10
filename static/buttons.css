@@ -120,7 +120,7 @@ a.button {
 
 #btn_chatbot {
   position: fixed;
-  bottom: 50px;
+  bottom: 20px;
   right: 30px;
   display: none;
   height: 4em;
